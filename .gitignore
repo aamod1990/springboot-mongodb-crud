@@ -1,1 +1,5 @@
-./target
+# IntelliJ IDEA files
+.idea/compiler.xml
+
+# Maven target directory and its contents
+target/

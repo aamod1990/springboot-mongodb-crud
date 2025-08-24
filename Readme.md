@@ -271,5 +271,3 @@ OR run the main class `SpringbootMongodbCrudApplication.java`.
 ---
 
 ✅ Now you have a **Spring Boot + MongoDB CRUD API** ready.
-
-Do you want me to also prepare a **GitHub-ready project structure (with `src` zipped)** so you can just run it directly instead of copy-pasting files?

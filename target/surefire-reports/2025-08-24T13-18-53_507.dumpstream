@@ -1,0 +1,5 @@
+# Created at 2025-08-24T13:18:53.654
+Boot Manifest-JAR contains absolute paths in classpath 'D:\Java_Learning\aamod1990_git_projects\springboot-mongodb-crud\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

@@ -275,8 +275,9 @@ OR run the main class `SpringbootMongodbCrudApplication.java`.
 Great 👍 You’ve got your tests written and the structure is correct. Now let’s see **how to run them**.
 
 ---
+## 10. Run test case
 
-## 🔹 1. Run with Maven (from command line)
+# 🔹 1. Run with Maven (from command line)
 
 Since you’re using Maven, the most common way is:
 
@@ -306,7 +307,7 @@ mvn -Dtest=EmployeeServiceTest#testSaveEmployee test
 
 ---
 
-## 🔹 2. Run from IDE (IntelliJ / Eclipse / VS Code)
+#🔹 2. Run from IDE (IntelliJ / Eclipse / VS Code)
 
 * Open the test class file (e.g., `EmployeeServiceTest.java`).
 * Right-click on the class name or a specific method.
@@ -316,7 +317,7 @@ This is often faster than Maven because it doesn’t recompile everything.
 
 ---
 
-## 🔹 3. Run with Maven + Surefire (JUnit 5 support)
+# 🔹 3. Run with Maven + Surefire (JUnit 5 support)
 
 Make sure you have a **recent version of Surefire** in your `pom.xml` (you said you’re on 3.2.5, which is perfect):
 
@@ -332,7 +333,7 @@ This ensures JUnit 5 (`junit-jupiter`) tests are recognized.
 
 ---
 
-## 🔹 4. Run Integration Tests Separately (optional)
+# 🔹 4. Run Integration Tests Separately (optional)
 
 If you name your integration tests with `*IT.java`, you can use the **Failsafe plugin**:
 

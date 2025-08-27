@@ -135,7 +135,7 @@ public interface EmployeeRepository extends MongoRepository<Employee, String> {
 package com.example.springbootmongodbcrud.service;
 
 import com.example.springbootmongodbcrud.model.Employee;
-import com.example.springbootmongodbcrud.repository.EmployeeRepository;
+import com.example.springbootmongodbcrud.repository.EmployeeRepositoryTest;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
@@ -188,7 +188,7 @@ public class EmployeeService {
 package com.example.springbootmongodbcrud.controller;
 
 import com.example.springbootmongodbcrud.model.Employee;
-import com.example.springbootmongodbcrud.service.EmployeeService;
+import com.example.springbootmongodbcrud.service.EmployeeServiceTest;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
@@ -271,3 +271,79 @@ OR run the main class `SpringbootMongodbCrudApplication.java`.
 ---
 
 ✅ Now you have a **Spring Boot + MongoDB CRUD API** ready.
+
+Great 👍 You’ve got your tests written and the structure is correct. Now let’s see **how to run them**.
+
+---
+
+## 🔹 1. Run with Maven (from command line)
+
+Since you’re using Maven, the most common way is:
+
+```bash
+mvn test
+```
+
+👉 This runs **all tests** under `src/test/java` using the Maven Surefire Plugin.
+
+If you want to run a **specific test class**:
+
+```bash
+mvn -Dtest=SpringbootMongodbCrudApplicationTest test
+```
+
+Or run multiple tests:
+
+```bash
+mvn -Dtest=EmployeeServiceTest,EmployeeControllerTest test
+```
+
+Or a single **method** inside a test class:
+
+```bash
+mvn -Dtest=EmployeeServiceTest#testSaveEmployee test
+```
+
+---
+
+## 🔹 2. Run from IDE (IntelliJ / Eclipse / VS Code)
+
+* Open the test class file (e.g., `EmployeeServiceTest.java`).
+* Right-click on the class name or a specific method.
+* Choose **Run 'EmployeeServiceTest'** (or the method).
+
+This is often faster than Maven because it doesn’t recompile everything.
+
+---
+
+## 🔹 3. Run with Maven + Surefire (JUnit 5 support)
+
+Make sure you have a **recent version of Surefire** in your `pom.xml` (you said you’re on 3.2.5, which is perfect):
+
+```xml
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.2.5</version>
+</plugin>
+```
+
+This ensures JUnit 5 (`junit-jupiter`) tests are recognized.
+
+---
+
+## 🔹 4. Run Integration Tests Separately (optional)
+
+If you name your integration tests with `*IT.java`, you can use the **Failsafe plugin**:
+
+```bash
+mvn verify
+```
+
+This way, unit tests (`*Test.java`) and integration tests (`*IT.java`) are separated.
+
+---
+
+✅ Since you already fixed the package issue (`com.example.springbootmongodbcrud`), `mvn test` should now run all your test cases without that `@SpringBootConfiguration` error.
+
+---

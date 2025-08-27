@@ -1,5 +1,6 @@
 # IntelliJ IDEA files
 .idea/compiler.xml
+.idea/uiDesigner.xml
 
 # Maven target directory and its contents
 target/
